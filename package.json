@@ -1,0 +1,22 @@
+{
+  "name": "vue-sandbox",
+  "version": "1.0.0",
+  "description": "Just a sandbox app for experimenting with Vue.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacob-briscoe/vue-sandbox.git"
+  },
+  "author": "Jacob Briscoe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacob-briscoe/vue-sandbox/issues"
+  },
+  "homepage": "https://github.com/jacob-briscoe/vue-sandbox#readme",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
+}
