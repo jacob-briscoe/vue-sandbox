@@ -1,4 +1,4 @@
-# vue-sandbox2
+# vue-sandbox
 
 ## Project setup
 ```
