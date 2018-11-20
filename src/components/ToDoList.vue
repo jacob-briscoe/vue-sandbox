@@ -1,5 +1,4 @@
 <template>
-  
   <div>
     <form @submit.prevent="addToDo">
       <input type="text" v-model="todoEntry" v-validate="'required|min:3'" name="todo" data-vv-validate-on="submit" />
