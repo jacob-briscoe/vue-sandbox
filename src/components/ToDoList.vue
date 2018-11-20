@@ -1,14 +1,25 @@
 <template>
-  <div>
-    <form @submit.prevent="addToDo">
-      <input type="text" v-model="todoEntry" v-validate="'required|min:3'" name="todo" data-vv-validate-on="submit" />
-      <span v-show="errors.has('todo')">{{ errors.first('todo') }}</span>
-    </form>
-    <ol>
-      <li v-for="todo in todos" :key="todo.id">
-        {{ todo.text }}
-      </li>
-    </ol>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <form @submit.prevent="addToDo" class="form-inline">
+          <div class="form-group">
+            <input type="text" placeholder="To Do Item" class="form-control" name="ToDo" id="todoEntry" v-model="todoEntry" v-validate="'required|min:3'" data-vv-validate-on="submit" />
+            <span class="badge badge-danger" v-show="errors.has('ToDo')">{{ errors.first('ToDo') }}</span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="list-group list-group-flush">
+          <li v-for="todo in todos" :key="todo.id"
+            class="list-group-item">
+            {{ todo.text }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 

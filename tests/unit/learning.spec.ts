@@ -12,9 +12,9 @@ test('map functions', () => {
 });
 
 test('filter functions', () => {
-  const todos: Array<ToDo> = [{ id: 1, text: 'Item 1' }, { id: 2, text: 'Item 2' }, { id: 3, text: 'Item 3' }];
+  const todos: ToDo[] = [{ id: 1, text: 'Item 1' }, { id: 2, text: 'Item 2' }, { id: 3, text: 'Item 3' }];
 
-  const filteredToDos: Array<ToDo> = todos.filter((value, index, array) => {
+  const filteredToDos: ToDo[] = todos.filter((value, index, array) => {
     return value.id === 1;
   });
 
@@ -30,7 +30,7 @@ test('reduce functions', () => {
 
   expect(sum).toBe(10);
 
-  const todos: Array<ToDo> = [{ id: 1, text: 'Item 1' }, { id: 2, text: 'Item 2' }, { id: 3, text: 'Item 3' }];
+  const todos: ToDo[] = [{ id: 1, text: 'Item 1' }, { id: 2, text: 'Item 2' }, { id: 3, text: 'Item 3' }];
 
   const singleToDo: ToDo = todos.reduce((acc, currValue, currIndex, array) => {
     return { id: array.length + 1, text: acc.text.concat(`,${currValue.text}`) };
